@@ -1,8 +1,6 @@
 package ramda;
 
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,15 +10,6 @@ import java.util.function.Function;
  * To change this template use File | Settings | File Templates.
  */
 public class Approach9 {
-
-    public static <X, Y> void processElements(Iterable<X> source, Predicate<X> tester, Function<X, Y> mapper, Consumer<Y> block) {
-        for (X p : source) {
-            if (tester.test(p)) {
-                Y data = mapper.apply(p);
-                block.accept(data);
-            }
-        }
-    }
 
     public static void main(String[] args) {
         List<Person> roster = Person.createRoster();
