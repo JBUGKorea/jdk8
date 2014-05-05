@@ -13,7 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class EventRamda extends Application {
+public class EventLambda extends Application {
 
     @Override
     public void start(Stage primaryStage) {
