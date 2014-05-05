@@ -1,4 +1,4 @@
-package ramda;
+package lambda;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import java.util.List;
  * Time: 오전 12:10
  * To change this template use File | Settings | File Templates.
  */
-public class Approach5 {
+public class Approach6 {
 
-    public static void printPersons(List<Person> roster, CheckPerson tester) {
+    public static void printPersonsWithPredicate(List<Person> roster, Predicate<Person> tester) {
         for (Person p : roster) {
             if (tester.test(p)) {
                 p.printPerson();
@@ -21,16 +21,16 @@ public class Approach5 {
 
     public static void main(String[] args) {
         List<Person> roster = Person.createRoster();
-        printPersons(
+        printPersonsWithPredicate(
                 roster,
-                (Person p) ->
+                p ->
                         p.getGender() == Person.Sex.MALE
                         && p.getAge() >= 10
                         && p.getAge() <= 25
         );
     }
 
-    interface CheckPerson {
-        boolean test(Person p);
+    interface Predicate<Person> {
+        boolean test(Person t);
     }
 }

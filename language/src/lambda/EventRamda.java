@@ -1,4 +1,4 @@
-package ramda;
+package lambda;
 
 /**
  * Created with IntelliJ IDEA.

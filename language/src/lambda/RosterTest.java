@@ -1,4 +1,4 @@
-package ramda;/*
+package lambda;/*
  * Copyright (c) 2013, Oracle and/or its affiliates. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -33,11 +33,8 @@ package ramda;/*
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.Comparator;
 import java.util.function.Predicate;
 import java.lang.Iterable;
-import java.time.chrono.IsoChronology;
-
 
 
 public class RosterTest {
