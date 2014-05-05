@@ -1,12 +1,11 @@
 package springbook.learningtest.spring.ioc;
 
 import org.junit.Test;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.support.StaticApplicationContext;
 import springbook.learningtest.spring.ioc.bean.Hello;
 
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -26,16 +25,5 @@ public class ApplicationContextTest1 {
         hello1.setName("oopchoi");
         System.out.println(hello1.sayHello());
         assertThat(hello1, is(notNullValue()));
-
-        BeanDefinition helloDef = new RootBeanDefinition(Hello.class);
-        helloDef.getPropertyValues().addPropertyValue("name", "Spring");
-        ac.registerBeanDefinition("hello2", helloDef);
-
-        Hello hello2 = ac.getBean("hello2", Hello.class);
-        System.out.println(hello2.sayHello());
-        assertThat(hello2.sayHello(), is("Hello Spring"));
-        assertThat(hello1, is(not(hello2)));
-
-        assertThat(ac.getBeanFactory().getBeanDefinitionCount(), is(2));
     }
 }
