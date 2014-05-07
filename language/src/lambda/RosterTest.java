@@ -50,6 +50,7 @@ public class RosterTest {
         for (Person p : roster) {
             if (p.getAge() >= age) {
                 p.printPerson();
+                System.out.println(p.getAge());
             }
         }
     }
