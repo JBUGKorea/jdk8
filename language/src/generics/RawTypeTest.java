@@ -1,4 +1,4 @@
-package jenerics;
+package generics;
 
 /**
  * Created with IntelliJ IDEA.
