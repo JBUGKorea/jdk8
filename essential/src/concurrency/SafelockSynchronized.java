@@ -3,14 +3,6 @@ package concurrency;
 import java.util.Random;
 
 public class SafelockSynchronized {
-	Runnable r = new Runnable() {
-		
-		@Override
-		public void run() {
-			// TODO Auto-generated method stub
-			
-		}
-	};
 	static class Friend {
 		private final String name;
 		
