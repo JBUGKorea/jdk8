@@ -5,14 +5,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.Random;
 
 public class Safelock {
-	Runnable r = new Runnable() {
-		
-		@Override
-		public void run() {
-			// TODO Auto-generated method stub
-			
-		}
-	};
 	static class Friend {
 		private final String name;
 		private final Lock lock = new ReentrantLock();
