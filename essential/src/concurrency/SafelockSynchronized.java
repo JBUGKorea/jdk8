@@ -15,11 +15,13 @@ public class SafelockSynchronized {
 		}
 
 		public void bow(Friend bower) {
-			synchronized (bower) {
-					System.out.format("%s: %s has"
-							+ " bowed to me!%n", 
-							this.name, bower.getName());
-					bower.bowBack(this);
+			synchronized (this) {
+				synchronized (bower) {
+						System.out.format("%s: %s has"
+								+ " bowed to me!%n", 
+								this.name, bower.getName());
+						bower.bowBack(this);
+				}
 			}
 		}
 
