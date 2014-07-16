@@ -45,7 +45,7 @@ public class SafelockSynchronized {
 			Random random = new Random();
 			for (;;) {
 				try {
-					Thread.sleep(random.nextInt(10000));
+					Thread.sleep(random.nextInt(1000));
 				} catch (InterruptedException e) {}
 				bowee.bow(bower);
 			}
