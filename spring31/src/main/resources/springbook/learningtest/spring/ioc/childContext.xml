@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- Hello는 부모 컨텍스트에도 존재한다. -->
+    <bean id="hello" class="springbook.learningtest.spring.ioc.bean.Hello">
+        <property name="name" value="Child" />
+        <!-- 참조하고자 하는 printer라는 빈에 대한 정보가 자식 컨텍스트에 존재하지 않는다. -->
+        <!-- printer 빈 메타 정보는 부모 컨텍스트에 존재한다. -->
+        <property name="printer" ref="printer" />
+    </bean>
+
+
+</beans>

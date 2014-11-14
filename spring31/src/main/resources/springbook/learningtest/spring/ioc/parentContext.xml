@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- Printer는 부모 컨텍스트에만 존재한다. -->
+    <bean id="printer" class="springbook.learningtest.spring.ioc.bean.StringPrinter" />
+
+    <!-- Hello는 자식 컨텍스트에도 존재한다. -->
+    <bean id="hello" class="springbook.learningtest.spring.ioc.bean.Hello">
+        <property name="name" value="Parent" />
+        <property name="printer" ref="printer" />
+    </bean>
+
+
+</beans>
