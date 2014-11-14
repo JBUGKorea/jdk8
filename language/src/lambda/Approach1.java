@@ -17,6 +17,8 @@ public class Approach1 {
                 p.printPerson();
             }
         }
+
+        //java.util.Arrays.sort();
     }
     public static void main(String[] args) {
         List<Person> roster = Person.createRoster();
