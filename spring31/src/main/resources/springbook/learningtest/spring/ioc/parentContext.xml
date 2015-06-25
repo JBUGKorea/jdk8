@@ -11,6 +11,4 @@
         <property name="name" value="Parent" />
         <property name="printer" ref="printer" />
     </bean>
-
-
 </beans>
